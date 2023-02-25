@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+<!--   <data>-->
+<!--      <variable-->
+<!--          name="valuesOf"-->
+<!--          type="com.example.m1.MainViewModel" />-->
+<!--   </data>-->
+<!--<RelativeLayout-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    >-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:text="@string/quotes"
+       android:textStyle="bold"
+       android:textSize="30sp"
+       android:layout_centerHorizontal="true"
+      android:layout_above="@+id/card"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+       />
+   <androidx.cardview.widget.CardView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_centerVertical="true"
+       android:layout_margin="10dp"
+       android:id="@+id/card"
+       android:elevation="8dp"
+      >
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+         android:orientation="vertical"
+
+          tools:ignore="UseCompoundDrawables">
+         <ImageView
+             android:layout_width="40dp"
+             android:layout_height="40dp"
+            android:src="@drawable/baseline_format_quote_24"
+            android:layout_margin="20dp"
+             android:contentDescription="@string/todo" />
+
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:id="@+id/content"
+             android:gravity="center"
+             android:textSize="20sp"
+             android:layout_marginLeft="40dp"
+             android:layout_marginRight="40dp"
+             android:textStyle="bold"
+             android:textColor="@color/black"
+             android:background="#009688"
+             />
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:id="@+id/author"
+             android:gravity="center"
+             android:textSize="20sp"
+             android:textStyle="normal"
+             android:layout_margin="20dp"
+             android:textColor="@color/black"
+             android:layout_marginTop="10dp"
+             />
+
+
+      </LinearLayout>
+   </androidx.cardview.widget.CardView>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/card"
+       android:layout_marginTop="30dp"
+       android:orientation="horizontal">
+
+
+   <Button
+       android:layout_width="110dp"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="20dp"
+       android:text="@string/previous"
+       android:id="@+id/preButton"
+       android:backgroundTint="@color/black"
+       style="?android:attr/buttonBarButtonStyle" />
+
+      <Button
+          android:layout_width="110dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="80dp"
+          android:text="@string/next"
+          android:id="@+id/nextButton"
+          android:backgroundTint="@color/black"
+          style="?android:attr/buttonBarButtonStyle" />
+
+   </LinearLayout>
+
+</RelativeLayout>

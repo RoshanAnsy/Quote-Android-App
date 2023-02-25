@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Quote</string>
+    <string name="content">content</string>
+    <string name="next">next</string>
+    <string name="todo">TODO</string>
+    <string name="quotes">Quotes</string>
+    <string name="previous">Previous</string>
+</resources>
